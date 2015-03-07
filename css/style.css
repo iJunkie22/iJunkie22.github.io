@@ -67,7 +67,6 @@ div#main-content {
   border: 2px solid #6cceef;
 	border-left-width: 0;
     border-right-width: 0;
-
 }
 
 div#main-content>h1:first-of-type {
@@ -77,12 +76,17 @@ div#main-content>h1:first-of-type {
 p {
   margin-left: 30px;
 }
+div#main-content p {
+  max-width: 750px;
+}
 footer {
-  margin: 10px;
+  margin: 40px 10px 10px;
   bottom: 0;
   vertical-align: bottom;
   text-align: inherit;
   background-color: #302f2f;
+  color: #e7e7e7;
+  font-size: 0.7em;
 }
 span.clause {
   font-size: 0.7em;
