@@ -8,9 +8,9 @@ function toggle_menu() {
         case "none":
             nav_el.style.display = "-webkit-flex";
             nav_el.style.display = "flex";
-            break
+            break;
         case "flex":
-            nav_el.style.display = "none";
+            nav_el.style.display = "";
             break;
     }
 }
