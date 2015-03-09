@@ -156,6 +156,7 @@ img.u-photo.avatar {
     margin-right: 0;
     padding-top: 0;
     text-align: right;
+    max-height: calc(100% - 64px);
   }
   header>nav>a {
     font-size: 1.2em;
