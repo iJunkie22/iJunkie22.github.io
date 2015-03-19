@@ -1,0 +1,63 @@
+div.link-cat {
+    border: 2px solid #a3a3a3;
+    border-radius: 8px;
+    padding: 4px;
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: #a3a3a3;
+}
+
+div.link-cat>div {
+    display: inline-block;
+    background-color: #ffffff;
+}
+
+/* BEGIN BROWSER LINKS */
+div.engine {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 2px 0 2px 2px;
+    margin: 2px;
+}
+
+div.engine a {
+    background-color: black;
+    border-radius: 8px;
+    padding: 2px 10px;
+    border: 2px solid black;
+    color: #ffffff;
+    border-color: inherit;
+}
+
+div.engine a:link {
+    text-decoration: none;
+}
+
+div.gecko {
+    color: #ce5221;
+    border-color: #ce5221;
+}
+
+div.gecko > a {
+    background-color: #ce5221;
+}
+
+div.blink {
+    color: #ce0e0e;
+    border-color: #ce0e0e;
+}
+
+div.blink > a {
+    background-color: #ce0e0e;
+}
+
+div.webkit {
+    color: #4070ce;
+    border-color: #4070ce;
+}
+
+div.webkit > a{
+    background-color: #4070ce;
+}
+
+/* END BROWSER LINKS */
