@@ -1,0 +1,29 @@
+ol {
+    color: #ffffff;
+    /*-webkit-padding-start: 0px;
+    -moz-padding-start: 0px;
+    padding-left: 0px;*/
+    background-color: #302f2f;
+    padding: 20px 100px;
+}
+
+li {
+    background-color: #302f2f;
+    margin-bottom: 2px;
+    padding: 1px;
+}
+
+*:link {
+    text-decoration: none;
+}
+
+li > a {
+    background-color: #141414;
+    display: block;
+    padding: 10px;
+}
+
+li > a > h2 {
+    margin: 0px;
+    color: #235b66;
+}

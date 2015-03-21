@@ -78,6 +78,7 @@ p {
 }
 div#main-content p {
   max-width: 750px;
+  line-height: 1.3em;
 }
 footer {
   margin: 40px 10px 10px;
@@ -109,19 +110,22 @@ img.u-photo.avatar {
   header {
     padding: 2px;
   }
-  header>div#banner-img {
+
+  header > div#banner-img {
     padding: 0;
     background-size: auto 50px;
     height: 60px;
     margin-right: 60px;
   }
-  header>div#banner-img>span {
+
+  header > div#banner-img > span {
     display: block;
     font-size: 40pt;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
 
   }
+
   /*header>div>img {
     height: 40px;
     display: inline-block;
@@ -135,7 +139,8 @@ img.u-photo.avatar {
     font-size: 2em;
     border-color: transparent;
   }
-  header>nav {
+
+  header > nav {
     position: absolute;
     /*display: -webkit-flex;
     display: flex;*/
@@ -159,15 +164,27 @@ img.u-photo.avatar {
     max-height: calc(100% - 64px);
     width: 100%; /* This is automatic for -webkit-flex*/
   }
-  header>nav>a {
+
+  header > nav > a {
     font-size: 1.2em;
     display: block;
     background-color: #141414;
     margin: 1px 1px;
   }
-  header>nav>a.current-link {
+
+  header > nav > a.current-link {
     color: #a236ae;
     font-weight: 400;
   }
 
+}
+code {
+  padding: 1px 3px;
+  background-color: #a3a3a3;
+  border-radius: 2px;
+}
+code, code>span {
+  font-family: monospace;
+  white-space: nowrap;
+  font-weight: bold;
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, maximum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="scripts/page.js" type="text/javascript"></script>
+    <title>iJunkie22 :: Projects</title>
+</head>
+
+<body>
+
+<header>
+    <div id="banner-img">
+        <span>iJunkie22</span>
+    </div>
+    <nav id="nav-box">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/iJunkie22">GitHub</a>
+        <a href="http://ijunkie22.github.io/Ardis-Builder/">Ardis-Builder</a>
+        <a href="https://twitter.com/iJunkie22">Twitter</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="bookmarks.html">Bookmarks</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+    <button class="menu-btn fa fa-bars" onclick="hi_cur_link();toggle_menu()"></button>
+</header>
+
+<div id="main-content">
+    <h1>Hacking OSX Finder SmartFolders</h1>
+    <hr>
+    <p>Finder will protect the extension from being changed, and will
+        will not provide any open-in functionality.
+        This means we have to circumvent this with a terminal.
+    </p>
+    <h2>Opening the File</h2>
+    <p>
+        First, navigate to the directory where the saved search is.
+        This is usually <code>cd "$HOME/Library/Saved Searches/"</code>.
+        <br><br>
+        At this point, you can use one of two ways.
+        You can use simple <code>sed</code>, or you can use <code>cp</code>.
+        If you are like me and want to see it, you can just use <code>cat "./FILENAME.savedSearch"</code>.
+        <br><br>
+        If you want to view/edit it in an editor, use <code>cp</code>
+        to copy it to another filename, the extension for which should be <code>.plist</code>.
+        Then just open the xml plist file in your favorite plist editor and enjoy.
+        Just remember to copy the <code>.plist</code> back to a <code>.savedSearch</code>.
+
+    </p>
+
+    <h2>Hack #1: Changing ANDs to ORs</h2>
+    <p>
+        I found this to be one of the simplest and most useful hacks.
+        <img src="http://img.prntscr.com/img?url=http://i.imgur.com/uSAVPs1.png" width="100%">
+        <img src="http://img.prntscr.com/img?url=http://i.imgur.com/2IW2uZj.png" width="100%">
+        By replacing the <code><span>&amp;</span><span>amp;</span><span>&amp;</span><span>amp;</span></code>
+        with <code>||</code>, you are making it into an 'or statement'.
+        <img src="http://img.prntscr.com/img?url=http://i.imgur.com/nUpdg9v.png">
+    </p>
+</div>
+
+
+<footer>&copy; 2015, Ethan Randall (iJunkie22).<br>
+    All references to "iJunkie22" are in the context of the developer pseudonym used by Ethan Randall.
+</footer>
+</body>
+
+
+</html>
