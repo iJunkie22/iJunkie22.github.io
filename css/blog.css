@@ -27,3 +27,19 @@ li > a > h2 {
     margin: 0px;
     color: #235b66;
 }
+
+@media only screen and (max-width: 400px) {
+    ol {
+        padding: 20px 4px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    div#main-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    div#main-content>h1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
