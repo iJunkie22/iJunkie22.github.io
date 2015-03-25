@@ -71,6 +71,10 @@ section#main-content {
 	border-left-width: 0;
     border-right-width: 0;
 }
+section section {
+  margin: 0 auto;
+  width: 984px;
+}
 
 section#main-content>h1:first-of-type {
   margin-top: 0;
@@ -181,6 +185,10 @@ img.u-photo.avatar {
   header > nav > a.current-link {
     color: #a236ae;
     font-weight: 400;
+  }
+  section section {
+    margin: 0 auto;
+    width: auto;
   }
 
 }
