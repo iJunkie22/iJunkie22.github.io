@@ -34,11 +34,11 @@ li > a > h2 {
         margin-left: 0;
         margin-right: 0;
     }
-    div#main-content {
+    section#main-content {
         padding-left: 0;
         padding-right: 0;
     }
-    div#main-content>h1 {
+    section#main-content>h1 {
         padding-left: 10px;
         padding-right: 10px;
     }
