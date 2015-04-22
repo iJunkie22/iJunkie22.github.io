@@ -4,20 +4,13 @@ h1, h2, h3, h4, h5, a, span, body, header, footer {
   /*-webkit-font-smoothing: antialiased;*/
 
 }
-button.menu-btn {
-  position: absolute;
+#menu-button {
+  position: fixed;
+  padding: 10px;
+  display: none;
   right: 0;
   top: 0;
-  display: none;
-  border-radius: 0;
-  /* Be extra specific to override powerful defaults*/
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
+  text-decoration: none;
 }
 body {
   margin: 0;
@@ -33,23 +26,22 @@ header>div {
   max-width: 100%;
   padding: 0 40px;
 }
-header>div#banner-img {
+#banner-img {
   background-image: url("../images/iJunkie22Logo.png");
   background-size: auto auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 100%;
   height: 106px;
+
 }
 /*header img {
   max-width: 100%;
 }*/
-header>div#banner-img>span {
+#banner-img>span {
   display: none;
 }
 nav {
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 20px;
   padding-top: 10px;
   border-top: 1px solid #5d3268;
@@ -118,21 +110,24 @@ img.u-photo.avatar {
 
 @media only screen and (max-width: 650px) {
   header {
-    padding: 2px;
+    padding: 1px;
   }
 
-  header > div#banner-img {
+  #banner-img {
     padding: 0;
     background-size: auto 50px;
     height: 60px;
     margin-right: 60px;
+    position: fixed;
+    width: 100%;
   }
 
-  header > div#banner-img > span {
+  #banner-img > span {
     display: block;
     font-size: 40pt;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #5d3268;
 
   }
 
@@ -140,10 +135,8 @@ img.u-photo.avatar {
     height: 40px;
     display: inline-block;
   }*/
-  button.menu-btn {
+  #menu-button {
     display: inline-block;
-    height: 60px;
-    width: 60px;
     color: #a236ae;
     background-color: transparent;
     font-size: 2em;
@@ -151,28 +144,37 @@ img.u-photo.avatar {
   }
 
   header > nav {
-    position: absolute;
-    /*display: -webkit-flex;
-    display: flex;*/
-    display: none;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
     right: 0;
-    top: 64px;
     height: 100%;
-    -webkit-order: 10;
-    -ms-flex-order: 10;
-    order: 10;
-    -webkit-flex-direction: column;
-    flex-direction: column;
+    max-height: calc(100% - 64px);
     background-color: rgba(0, 0, 0, 0.65);
-    margin-top: 0;
+    margin-top: 66px;
     margin-left: 0;
     margin-right: 0;
     padding-top: 0;
     text-align: right;
-    max-height: calc(100% - 64px);
     width: 100%; /* This is automatic for -webkit-flex*/
+    border-top: none;
+    overflow-y: hidden;
+  }
+  header > nav.expanded {
+    transition-duration: 1s;
+  }
+  header > nav.expanded>a{
+    line-height: 1em;
+    transition-duration: 2s;
+  }
+  header > nav:not(.expanded)>a{
+    padding: 0 !important;
+    margin: 0px auto !important;
+    line-height: 0;
+    transition-duration: 2s;
+  }
+
+  header > nav:not(nav.expanded) > *{
+    padding: 0;
+    height: 0;
+    transition-duration: 2s;
   }
 
   header > nav > a {
@@ -185,6 +187,7 @@ img.u-photo.avatar {
   header > nav > a.current-link {
     color: #a236ae;
     font-weight: 400;
+    transition-duration: unset;
   }
   section section {
     margin: 0 auto;

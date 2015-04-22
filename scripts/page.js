@@ -1,19 +1,10 @@
+var menuBtn = document.getElementById("menu-button");
+
 function toggle_menu() {
     var nav_el = document.getElementById("nav-box");
-    var nav_style = window.getComputedStyle(nav_el, null);
-    var display_state = nav_style.getPropertyValue("display");
-    var d_s_basename = display_state.substr(-4);
-
-    switch (d_s_basename) {
-        case "none":
-            nav_el.style.display = "-webkit-flex";
-            nav_el.style.display = "flex";
-            break;
-        case "flex":
-            nav_el.style.display = "";
-            break;
-    }
+    nav_el.toggleClassName("expanded");
 }
+
 function hi_cur_link () {
     var doc_title = document.title;
     var doc_subtitle = doc_title.split(" :: ")[1];
@@ -28,3 +19,10 @@ function hi_cur_link () {
         }
     }
 }
+
+menuBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    hi_cur_link();
+    toggle_menu();
+    return false;
+}, false);
