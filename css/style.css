@@ -12,13 +12,16 @@ h1, h2, h3, h4, h5, a, span, body, header, footer {
   top: 0;
   text-decoration: none;
 }
+html {
+  background: #1E1E21 radial-gradient(ellipse farthest-side at left top , #00549E 0px, transparent 100%)
+  no-repeat scroll center top / 100% 500px;
+}
 body {
   margin: 0;
-  width: 100%;
-  background-color: #302f2f;
+  background-color: rgba(0,0,0,0.2);
 }
 header {
-  background-color: black;
+  background-color: rgba(0,0,0,0.7);
   padding: 20px;
   max-width: 100%;
 }
@@ -55,7 +58,16 @@ nav>a {
 nav>a:hover {
   color: #a236ae;
 }
-section#main-content {
+section {
+  width: calc(100% - 200px);
+  margin: 20px 60px 20px 20px;
+  padding: 10px;
+  background: rgba(0,0,0,0.1) linear-gradient(to right, rgba(0,0,0,0.5) 0px, rgba(0,0,0,0.05) 50%)
+              no-repeat scroll ;
+  overflow: hidden;
+  color: #fff;
+}
+/*section#main-content {
   background-color: white;
   padding: 0 10px;
   box-shadow: 0 0 12px 4px #477e91;
@@ -78,13 +90,13 @@ p {
 section#main-content p {
   max-width: 750px;
   line-height: 1.3em;
-}
+}*/
 footer {
   margin: 40px 10px 10px;
   bottom: 0;
   vertical-align: bottom;
   text-align: inherit;
-  background-color: #302f2f;
+  /*background-color: #302f2f;*/
   color: #e7e7e7;
   font-size: 0.7em;
 }
@@ -99,14 +111,15 @@ span.clause {
   max-width: 400px;
 }
 
-/* BEGIN TWITTER WIDGET OVERRIDES */
-.tweet {
-  padding-left: 12px !important;
-}
-img.u-photo.avatar {
-  display: none !important;
-}
-/* END OVERRIDES */
+
+/*
+                 _     _ _
+ _ __ ___   ___ | |__ (_) | ___
+| '_ ` _ \ / _ \| '_ \| | |/ _ \
+| | | | | | (_) | |_) | | |  __/
+|_| |_| |_|\___/|_.__/|_|_|\___|
+
+*/
 
 @media only screen and (max-width: 650px) {
   header {
@@ -188,6 +201,9 @@ img.u-photo.avatar {
     color: #a236ae;
     font-weight: 400;
     transition-duration: unset;
+  }
+  section{
+    width: auto;
   }
   section section {
     margin: 0 auto;
