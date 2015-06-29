@@ -1,0 +1,11 @@
+html {
+  filter: invert(100%);
+}
+
+html, body {
+  background: unset;
+}
+
+section a, div.seperator::before, #banner-img {
+  filter: invert(100%);
+}
